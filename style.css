@@ -6,19 +6,19 @@
 
 body {
     background: #333;
+    font-size: 16px;
 }
 
 .full {
     height: 70vh;
     width: 50%;
-    background: black;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto; 
-    border-radius: .7rem;
+    border-radius: .7em;
 }
 
 .full .mode{
@@ -27,8 +27,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .5rem;
-    border-radius: .7rem .7rem 0 0;
+    gap: .5em;
+    border-radius: .7em .7em 0 0;
 }
 
 .full .mode button {
@@ -38,8 +38,8 @@ body {
     outline: none;
     background: rgba(0, 0, 255, 0.7);
     color: white;
-    font-size: 1.5rem;
-    border-radius: .4rem;
+    font-size: 1.5em;
+    border-radius: .4em;
     box-shadow: 4px 4px 5px black;
     cursor: pointer;
 }
@@ -55,9 +55,9 @@ body {
 /* ============================================================== */
 
 .cryption {
-    background: linear-gradient(to bottom, #5a05e2, #00f);
+    background: linear-gradient(to bottom, #5a05e2, #0000ff), #5a05e2;
     height: 88%;
-    border-radius: 0 0 .7rem .7rem;
+    border-radius: 0 0 .7em .7em;
 }
 
 .cryption>div {
@@ -73,7 +73,7 @@ body {
     height: 10%;
     width: 40%;
     margin: 0 auto;
-    gap: .5rem;
+    gap: .5em;
     align-items: center;
     justify-content: center;
 }
@@ -82,10 +82,10 @@ body {
     height: 100%;
     width: 98%;
     margin: 0 auto;
-    padding: 2rem;
-    font-size: 1.5rem;
+    padding: 2em;
+    font-size: 1.5em;
     resize: none;
-    border-radius: .7rem;
+    border-radius: .7em;
     background: rgba(255, 255, 255, 0.3);
     outline: none;
     border: none;
@@ -103,12 +103,12 @@ body {
 .cryption div button {
     height: 80%;
     width: 60%;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     border: none;
     outline: none;
     background: #5a05e2;
     color: white;
-    border-radius: .3rem;
+    border-radius: .3em;
     box-shadow: 3px 3px 3px black;
     cursor: pointer;
 }
@@ -120,6 +120,9 @@ body {
 /* ===================================================== */
 
 @media screen and (min-width: 200px) {
+    body {
+        font-size: 12px;
+    }
     .full {
         width: 95%;
     }
@@ -129,9 +132,21 @@ body {
     .cryption .two {
         width: 90%;
     }
+    .cryption div textarea {
+        padding: 1em;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
     .full {
         width: 95%;
     }
@@ -170,21 +185,39 @@ body {
 
 /* ============================================= */
 
-@media  screen and (min-height: 300px) {
+@media  screen and (min-height: 10px) {
+    body {
+        font-size: 5px;
+    }
     .full {
         height: 95vh;
     }
 }
 
-@media  screen and (min-height: 600px) {
+@media  screen and (min-height: 250px) {
+    body {
+        font-size: 8px;
+    }
     .full {
-        height: 85vh;
+        height: 95vh;
+    }
+}
+
+@media  screen and (min-height: 440px) {
+    body {
+        font-size: 12px;
+    }
+    .full {
+        height: 95vh;
     }
 }
 
 @media  screen and (min-height: 900px) {
+    body {
+        font-size: 16px;
+    }
     .full {
-        height: 75vh;
+        height: 80vh;
     }
 }
 

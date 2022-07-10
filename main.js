@@ -77,6 +77,8 @@ crypt.addEventListener('click', function(x){
 })
 
 copyText.addEventListener('click', function(){
+    outputArea.select();
+    outputArea.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(outputArea.value);
 })
 
