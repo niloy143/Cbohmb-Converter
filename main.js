@@ -9,7 +9,7 @@ var decryptionMode = document.getElementsByClassName('mode-changer')[1];
 
 var validText = 'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ .,?!()\'"';
 var outputVariable = '';
-var cryptionValue = 'encrypt';
+var cryptionValue = 'decrypt';
 
 decryptionMode.addEventListener('click', function(){
     decryptionMode.setAttribute('id', 'selected-mode');
