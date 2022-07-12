@@ -37,52 +37,44 @@ inputArea.addEventListener('input', function(){
     }
 }) 
 
-crypt.addEventListener('click', function(x){
+crypt.addEventListener('click', function(){
     outputVariable = '';
-    if(cryptionValue === 'encrypt') {
-        for(var i=0; i<inputArea.value.length; i++) {
-            if(inputArea.value[i]=== ' ' || inputArea.value[i]=== '.' || inputArea.value[i]=== ',' || inputArea.value[i]=== '?' || inputArea.value[i]=== '!' || inputArea.value[i]=== '(' || inputArea.value[i]=== ')' || inputArea.value[i]=== '\'' || inputArea.value[i]=== '"'){
-                outputVariable += inputArea.value[i];
-            }
-            
-            else if(((validText.indexOf(inputArea.value[i]))%2 === 1) && ((validText.indexOf(inputArea.value[i])) <= 25)){
-                outputVariable += validText[25 - (validText.indexOf(inputArea.value[i]))];
-            }
-            else if(((validText.indexOf(inputArea.value[i]))%2 === 0) && ((validText.indexOf(inputArea.value[i])) <= 25)){
-                outputVariable += validText[(validText.indexOf(inputArea.value[i])) + 1];
-            }
+    for(var i=0; i<inputArea.value.length; i++) {
 
-            else if(((validText.indexOf(inputArea.value[i]))%2 === 0) && ((validText.indexOf(inputArea.value[i])) > 26)){
-                outputVariable += validText[(52 - (validText.indexOf(inputArea.value[i])))+27];
-            }
-            else if(((validText.indexOf(inputArea.value[i]))%2 === 1) && ((validText.indexOf(inputArea.value[i])) > 26)){
-                outputVariable += validText[(validText.indexOf(inputArea.value[i])) + 1];
-            }
-
-            outputArea.value = outputVariable;
+        if(inputArea.value[i]=== ' ' || inputArea.value[i]=== '.' || inputArea.value[i]=== ',' || inputArea.value[i]=== '?' || inputArea.value[i]=== '!' || inputArea.value[i]=== '(' || inputArea.value[i]=== ')' || inputArea.value[i]=== '\'' || inputArea.value[i]=== '"'){
+            outputVariable += inputArea.value[i];
         }
-    }
-
-    else if(cryptionValue === 'decrypt') {
-        for(var i=0; i<inputArea.value.length; i++) {
-            if(inputArea.value[i]=== ' ' || inputArea.value[i]=== '.' || inputArea.value[i]=== ',' || inputArea.value[i]=== '?' || inputArea.value[i]=== '!' || inputArea.value[i]=== '(' || inputArea.value[i]=== ')' || inputArea.value[i]=== '\'' ||     inputArea.value[i]=== '"'){
-                outputVariable += inputArea.value[i];
-            }
-            else if(((validText.indexOf(inputArea.value[i]))%2 === 1) && ((validText.indexOf(inputArea.value[i])) <= 25)){
+        
+        else if (cryptionValue === 'decrypt') {
+            if(((validText.indexOf(inputArea.value[i]))%2 === 1) && ((validText.indexOf(inputArea.value[i])) <= 25)){
                 outputVariable += validText[(validText.indexOf(inputArea.value[i])) - 1];
             }
             else if(((validText.indexOf(inputArea.value[i]))%2 === 0) && ((validText.indexOf(inputArea.value[i])) <= 25)){
                 outputVariable += validText[25 - (validText.indexOf(inputArea.value[i]))];
             }
-
             else if(((validText.indexOf(inputArea.value[i]))%2 === 0) && ((validText.indexOf(inputArea.value[i])) > 26)){
                 outputVariable += validText[(validText.indexOf(inputArea.value[i])) - 1];
             }
             else if(((validText.indexOf(inputArea.value[i]))%2 === 1) && ((validText.indexOf(inputArea.value[i])) > 26)){
                 outputVariable += validText[(52 - (validText.indexOf(inputArea.value[i]))) + 27];
             }
-            outputArea.value = outputVariable;
         }
+        
+        else if(cryptionValue === 'encrypt') {
+            if(((validText.indexOf(inputArea.value[i]))%2 === 1) && ((validText.indexOf(inputArea.value[i])) <= 25)){
+                outputVariable += validText[25 - (validText.indexOf(inputArea.value[i]))];
+            }
+            else if(((validText.indexOf(inputArea.value[i]))%2 === 0) && ((validText.indexOf(inputArea.value[i])) <= 25)){
+                outputVariable += validText[(validText.indexOf(inputArea.value[i])) + 1];
+            }
+            else if(((validText.indexOf(inputArea.value[i]))%2 === 0) && ((validText.indexOf(inputArea.value[i])) > 26)){
+                outputVariable += validText[(52 - (validText.indexOf(inputArea.value[i])))+27];
+            }
+            else if(((validText.indexOf(inputArea.value[i]))%2 === 1) && ((validText.indexOf(inputArea.value[i])) > 26)){
+                outputVariable += validText[(validText.indexOf(inputArea.value[i])) + 1];
+            }
+        }
+        outputArea.value = outputVariable;
     }
 })
 
