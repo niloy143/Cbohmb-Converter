@@ -56,7 +56,7 @@ crypt.addEventListener('click', function(){
                 outputVariable += validText[(validText.indexOf(inputArea.value[i])) - 1];
             }
             else if(((validText.indexOf(inputArea.value[i]))%2 === 1) && ((validText.indexOf(inputArea.value[i])) > 26)){
-                outputVariable += validText[(52 - (validText.indexOf(inputArea.value[i]))) + 27];
+                outputVariable += validText[79 - (validText.indexOf(inputArea.value[i]))];
             }
         }
         
@@ -68,7 +68,7 @@ crypt.addEventListener('click', function(){
                 outputVariable += validText[(validText.indexOf(inputArea.value[i])) + 1];
             }
             else if(((validText.indexOf(inputArea.value[i]))%2 === 0) && ((validText.indexOf(inputArea.value[i])) > 26)){
-                outputVariable += validText[(52 - (validText.indexOf(inputArea.value[i])))+27];
+                outputVariable += validText[79 - (validText.indexOf(inputArea.value[i]))];
             }
             else if(((validText.indexOf(inputArea.value[i]))%2 === 1) && ((validText.indexOf(inputArea.value[i])) > 26)){
                 outputVariable += validText[(validText.indexOf(inputArea.value[i])) + 1];
